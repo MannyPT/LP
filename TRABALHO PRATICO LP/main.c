@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define TAM 100
+#define MAX_ALUNO 5
 
 typedef enum {
     A, B, C, D
@@ -95,6 +96,17 @@ void mostrar_aluno(ALUNO p) {
     }
 }
 
+void ficheiro_aluno(ALUNO p){
+    FILE *pFicheiro;
+    
+    pFicheiro = fopen(MAX_ALUNO,"w");
+    if(pFicheiro == (FILE*)NULL){
+        printf("Impossivel abrir MAX_ALUNO");
+    }else{
+        fclose(pFicheiro);
+    }
+    
+}
 int main(int argc, char** argv) {
 
     return (EXIT_SUCCESS);
